@@ -4,4 +4,4 @@ Project Started: Jan. 12,2023 9:32PM
 Project End: TBD
 
 Progress Report Jan. 15, 2023 10:56AM
-added base code for the game. Still runs on console.
+added base code for the game. Still runs on console. added the for loop for 5 rounds.
