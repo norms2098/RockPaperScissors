@@ -6,11 +6,12 @@ function getComputerChoice()
     return computerChoices[randomNumber]
 }
 
-function playGame(playerSelection,computerSelection){
+function playGame(playerSelection,computerSelection,roundCounter){
     let player = playerSelection.toLowerCase();
     let computer = computerSelection.toLowerCase();
-    
+    let round = roundCounter;
     //print choices
+    console.log(`Round ${round}:`)
     console.log(`User Choice: ${player}`);
     console.log(`Computer Choice: ${computer}`);
 
@@ -29,16 +30,14 @@ function playGame(playerSelection,computerSelection){
     
 }
 
-/*function game(playerSelection,computerSelection){
-    let user=playerSelection,pc=computerSelection;
-    for(let i=0;i<5;i++){
-        let userChoice = prompt("What is your choice?");
-        let computerChoice = getComputerChoice();
-        playGame(user,pc);
+function game(){
+    for (let i=1;i<6;i++)
+    {
+        let playerChoice = prompt("Rock, Paper, or Scissors?");
+        let pcChoice = getComputerChoice();
+        console.log(playGame(playerChoice,pcChoice,i));
     }
-}*/
+}
 
 
-const playerChoice = prompt("Rock, Paper, or Scissors?");
-const pcChoice = getComputerChoice();
-console.log(playGame(playerChoice,pcChoice));
+console.log(game());
