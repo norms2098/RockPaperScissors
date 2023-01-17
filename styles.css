@@ -1,0 +1,35 @@
+#main{
+    display:flex;
+ 
+    flex-direction: column;
+    align-items: center;
+    color: beige;
+}
+
+.header-main h1{
+    margin-bottom: 0;
+    text-align: center;
+}
+.header-main p{
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 90px
+}
+
+#rock-button{
+    background-image: url('https://cdn-icons-png.flaticon.com/512/2041/2041897.png');
+    background-size: 130px;
+    height:130px;
+    width:130px;
+}
+#paper-button{
+    background-image: url('https://thenounproject.com/api/private/icons/1187947/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0&token=gAAAAABjxrhMrawFGKzBVug618FNGlgcgU_kY0PThyTK_eJghI353grETBW3ksYBPbwMYZro0ZScYr3TtAVZGPidSZQBnG_nHQ%3D%3D');
+    background-size: 130px;
+    height:130px;
+    width:130px;
+}#scissors-button{
+    background-image: url('https://thenounproject.com/api/private/icons/1334179/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0&token=gAAAAABjxrhMrawFGKzBVug618FNGlgcgU_kY0PThyTK_eJghI353grETBW3ksYBPbwMYZro0ZScYr3TtAVZGPidSZQBnG_nHQ%3D%3D');
+    background-size: 130px;
+    height:130px;
+    width:130px;
+}
