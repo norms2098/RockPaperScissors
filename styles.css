@@ -1,6 +1,5 @@
 #main{
     display:flex;
- 
     flex-direction: column;
     align-items: center;
     color: beige;
@@ -9,27 +8,47 @@
 .header-main h1{
     margin-bottom: 0;
     text-align: center;
+
 }
 .header-main p{
     margin-top: 0;
     text-align: center;
-    margin-bottom: 90px
+    margin-bottom: 50px
 }
 
-#rock-button{
-    background-image: url('https://cdn-icons-png.flaticon.com/512/2041/2041897.png');
-    background-size: 130px;
-    height:130px;
-    width:130px;
+.rock-button,.paper-button,.scissors-button{
+    font-size: 50px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: dashed black;
+    margin: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    width:400px;
+    height:100px;
 }
-#paper-button{
-    background-image: url('https://thenounproject.com/api/private/icons/1187947/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0&token=gAAAAABjxrhMrawFGKzBVug618FNGlgcgU_kY0PThyTK_eJghI353grETBW3ksYBPbwMYZro0ZScYr3TtAVZGPidSZQBnG_nHQ%3D%3D');
-    background-size: 130px;
-    height:130px;
-    width:130px;
-}#scissors-button{
-    background-image: url('https://thenounproject.com/api/private/icons/1334179/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0&token=gAAAAABjxrhMrawFGKzBVug618FNGlgcgU_kY0PThyTK_eJghI353grETBW3ksYBPbwMYZro0ZScYr3TtAVZGPidSZQBnG_nHQ%3D%3D');
-    background-size: 130px;
-    height:130px;
-    width:130px;
+.rock-button:hover,.paper-button:hover,.scissors-button:hover{
+    border: 2px solid  beige;
+    cursor:pointer;
+    color: beige;
+    background-color: darkslateblue;
+}
+
+
+.score-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.score-counters{
+    display: flex;
+    gap:300px
+}
+.score-section,.score-counters{
+    color: beige;
+    font-size: 25px;
+}
+span{
+    font-size: 15px;
 }
