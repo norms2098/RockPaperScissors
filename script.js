@@ -56,15 +56,18 @@ const gameMain = () =>{
                 round++;
                 roundCounter.innerHTML=`Round ${round}`;
                 let randomNumber = Math.floor(Math.random()*computerChoices.length);
-                
+
                 const computerDecision = computerChoices[randomNumber];
                 winnerDecide(this.innerText,computerDecision);
+
+                /*if(round==5){
+
+                }*/
             })
-            
-            
-
-
         });
+    }
+    const winnerDecide = () =>{
+        
     }
     playGame();
 }
