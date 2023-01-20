@@ -1,5 +1,5 @@
 
-function getComputerChoice()
+/*function getComputerChoice()
 {
     let computerChoices = ['rock','paper','scissors'];
     let randomNumber = Math.floor(Math.random()*computerChoices.length)
@@ -37,7 +37,41 @@ function game(){
         let pcChoice = getComputerChoice();
         console.log(playGame(playerChoice,pcChoice,i));
     }
+}*/
+
+const gameMain = () =>{
+    let playerScore=0,computerScore=0,round=0;
+    const playGame = () =>{
+        
+        const btnRock = document.querySelector('.rock-button');
+        const btnPaper = document.querySelector('.paper-button');
+        const btnScissors = document.querySelector('.scissors-button');
+
+        const playerChoices=[btnRock,btnPaper,btnScissors];
+        const computerChoices=['rock','paper','scissors'];
+
+        playerChoices.forEach(choices => {
+            choices.addEventListener('click',function(){
+                const roundCounter=document.querySelector('.rounds');
+                round++;
+                roundCounter.innerHTML=`Round ${round}`;
+                let randomNumber = Math.floor(Math.random()*computerChoices.length);
+
+                const computerDecision = computerChoices[randomNumber];
+                winnerDecide(this.innerText,computerDecision);
+
+                /*if(round==5){
+
+                }*/
+            })
+        });
+    }
+    const winnerDecide = () =>{
+        
+    }
+    playGame();
 }
 
+gameMain();
 
-console.log(game());
+
