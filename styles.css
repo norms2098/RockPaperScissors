@@ -36,6 +36,13 @@
     background-color: darkslateblue;
 }
 
+.rock-button:disabled,.paper-button:disabled,.scissors-button:disabled{
+    border: 2px dashed  beige;
+    cursor: default;
+    color: beige;
+    background-color:transparent;
+}
+
 
 .score-section{
     display: flex;

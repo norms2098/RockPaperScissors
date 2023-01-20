@@ -60,9 +60,12 @@ const gameMain = () =>{
                 const computerDecision = computerChoices[randomNumber];
                 winnerDecide(this.innerText,computerDecision);
 
-                /*if(round==5){
-
-                }*/
+                if(round==5){
+                    document.getElementById("rock").disabled=true;
+                    document.getElementById("paper").disabled=true;
+                    document.getElementById("scissors").disabled=true;
+                    stopGame(playerScore,computerScore);
+                }
             })
         });
     }
@@ -87,6 +90,20 @@ const gameMain = () =>{
             roundResult.innerHTML=`You lose. ${computer} beats ${player}.`;
             computerScore++;
             updateComputerScore.textContent=computerScore;
+        }
+    }
+
+    const stopGame = (finalPlayerScore,finalComputerScore) =>{
+        const gameOver=document.querySelector('.game-over');
+        if(finalPlayerScore > finalComputerScore){
+            gameOver.innerText="You win! Congratulations!";
+
+        }
+        else if(finalPlayerScore<finalComputerScore){
+            gameOver.innerText="You lose. Computer wins. Try again next time!";
+        }
+        else{
+            gameOver.innerText="It's a tie."
         }
     }
     playGame();
