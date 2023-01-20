@@ -66,8 +66,28 @@ const gameMain = () =>{
             })
         });
     }
-    const winnerDecide = () =>{
-        
+    const winnerDecide = (player,computer) =>{
+        const roundResult = document.querySelector('.results');
+        const updatePlayerScore = document.querySelector('.playerscore-count');
+        const updateComputerScore = document.querySelector('.computerscore-count');
+
+        player=player.toLowerCase();
+        computer=computer.toLowerCase();
+        if((player === "rock" && computer === "scissors") || 
+            (player === "paper" && computer === "rock") ||
+            (player === "scissors" && computer === "paper")){
+            roundResult.innerHTML=`You win! ${player} beats ${computer}.`;
+            playerScore++;
+            updatePlayerScore.innerHTML= `<p> ${playerScore}</p>`;
+        }
+        else if(player === computer){
+            roundResult.textContent="Tie.";
+        }
+        else{
+            roundResult.innerHTML=`You lose. ${computer} beats ${player}.`;
+            computerScore++;
+            updateComputerScore.textContent=computerScore;
+        }
     }
     playGame();
 }
