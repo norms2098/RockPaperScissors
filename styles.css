@@ -27,6 +27,7 @@
     outline: none;
     width:400px;
     height:100px;
+    
 }
 .rock-button:hover,.paper-button:hover,.scissors-button:hover{
     border: 2px solid  beige;
@@ -48,7 +49,4 @@
 .score-section,.score-counters{
     color: beige;
     font-size: 25px;
-}
-span{
-    font-size: 15px;
 }
