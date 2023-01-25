@@ -79,7 +79,7 @@ const gameMain = () =>{
         if((player === "rock" && computer === "scissors") || 
             (player === "paper" && computer === "rock") ||
             (player === "scissors" && computer === "paper")){
-            roundResult.innerHTML=`You win! ${player} beats ${computer}.`;
+            roundResult.innerHTML=`You win this round! ${player} beats ${computer}.`;
             playerScore++;
             updatePlayerScore.innerHTML= `<p> ${playerScore}</p>`;
         }
@@ -87,7 +87,7 @@ const gameMain = () =>{
             roundResult.textContent="Tie.";
         }
         else{
-            roundResult.innerHTML=`You lose. ${computer} beats ${player}.`;
+            roundResult.innerHTML=`You lose this round. ${computer} beats ${player}.`;
             computerScore++;
             updateComputerScore.textContent=computerScore;
         }
